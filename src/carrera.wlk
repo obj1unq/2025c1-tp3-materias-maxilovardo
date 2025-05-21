@@ -26,8 +26,8 @@ class Carrera{
 class Materia{
     const property requisitos = #{}
     var property cupo = 100
-    const property alumnos = #{}
-    const property listaDeEspera = #{}
+    const property alumnos = []
+    const property listaDeEspera = []
 
     method estaCursando(alumno){
         return alumnos.contains(alumno)
@@ -64,8 +64,8 @@ class Materia{
     }
 
     method agregarSiHayEnEspera(){
-        if(listaDeEspera.size() > 0){
-            alumnos.add(listaDeEspera.first())
+        if(self.listaDeEspera().size() > 0){
+            alumnos.add(self.listaDeEspera().head())
         }
     }
 }

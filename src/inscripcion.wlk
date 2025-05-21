@@ -33,7 +33,7 @@ class Estudiante{
 
     method puedeInscribir(materia){
         return self.materiaEnCarrera(materia) &&
-               not self.tieneAprobada(materia) &&
+               (not self.tieneAprobada(materia)) &&
                materia.estaCursando(self) &&
                materia.cumpleRequisitos(self)
     }
